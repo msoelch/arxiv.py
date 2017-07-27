@@ -12,7 +12,7 @@ root_url = 'http://export.arxiv.org/api/'
 # TODO: Field queries ("Details of Query Construction")
 # TODO: Do I want to add support for quotes to group words/order of ops?
 def query(search_query="", id_list=[], prune=True, start=0, max_results=10):
-    url_args = urllib.urlencode({"search_query": search_query, 
+    url_args = urllib.parse.urlencode({"search_query": search_query,
                                  "id_list": ','.join(id_list),
                                  "start": start,
                                  "max_results": max_results})
